@@ -13,4 +13,6 @@ weights = [[0.02, 0.40, 0.10, 0.05],
 
 outputs = np.dot(inputs, np.array(weights).T)
 
+#hello
+
 print(outputs)
