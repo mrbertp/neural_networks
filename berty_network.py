@@ -12,6 +12,7 @@ weights = [[0.02, 0.40, 0.10, 0.05],
            [0.34, 0.56, 0.02, 0.55]]
 
 # comment on test branch to check out something
+# hello im in test branch im awesome
 outputs = np.dot(inputs, np.array(weights).T)
 
 print(outputs)
