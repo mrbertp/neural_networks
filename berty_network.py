@@ -12,6 +12,7 @@ weights1 = [[0.02, 0.40, 0.10, 0.05],
             [0.34, 0.56, 0.02, 0.55]]
 
 # 2nd layer of 2 neurons
+# notice that the number of inputs has changed to 3, conditioned by dimensons of output1
 weights2 = [[0.34, 0.56, 0.11],
             [0.22, 0.10, 0.12]]
 
