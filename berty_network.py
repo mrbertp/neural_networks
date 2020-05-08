@@ -23,6 +23,7 @@ weights2 = [[0.34, 0.56, 0.11],
 outputs1 = np.dot(inputs, np.array(weights1).T)
 
 # feeding output of layer 1 to layer 2 and calculating output of layer 2
+# uhg
 outputs2 = np.dot(outputs1, np.array(weights2).T)
 
 print(outputs2)
