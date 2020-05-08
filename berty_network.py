@@ -21,6 +21,7 @@ weights2 = [[0.34, 0.56, 0.11],
 
 # uno
 # dos
+# tres
 
 # calculating output of layer 1
 outputs1 = np.dot(inputs, np.array(weights1).T)
