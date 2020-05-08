@@ -14,4 +14,6 @@ weights = [[0.02, 0.40, 0.10, 0.05],
 # modifying master to see if merging works well
 outputs = np.dot(inputs, np.array(weights).T)
 
+#hello
+
 print(outputs)
