@@ -13,6 +13,9 @@ weights = [[0.02, 0.40, 0.10, 0.05],
 
 # comment on test branch to check out something
 # comment on master branch to shit out
+# hello im in test branch im awesome
+# third comment on test branch wow
+
 outputs = np.dot(inputs, np.array(weights).T)
 
 print(outputs)
