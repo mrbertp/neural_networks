@@ -19,6 +19,8 @@ weights2 = [[0.34, 0.56, 0.11],
 # the output of neurons computed via multiplication of matrixes 'inputs' and 'weights'
 # transposing weights for the dimensions to match
 
+# uno
+
 # calculating output of layer 1
 outputs1 = np.dot(inputs, np.array(weights1).T)
 
