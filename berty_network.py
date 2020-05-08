@@ -11,6 +11,8 @@ weights = [[0.02, 0.40, 0.10, 0.05],
            [0.20, 0.10, 0.04, 0.23],
            [0.34, 0.56, 0.02, 0.55]]
 
+# the output of neurons computed via multiplication of matrixes 'inputs' and 'weights'
+# transposing weights for the dimensions to match
 outputs = np.dot(inputs, np.array(weights).T)
 
 print(outputs)
