@@ -11,15 +11,21 @@ weights1 = [[0.02, 0.40, 0.10, 0.05],
             [0.20, 0.10, 0.04, 0.23],
             [0.34, 0.56, 0.02, 0.55]]
 
+# biases for each neuron in 1st layer
+biases1 = [3, 4, 6]
+
 # 2nd layer of 2 neurons
 # number of inputs has changed to 3, conditioned by dimensons of output1
 weights2 = [[0.34, 0.56, 0.11],
             [0.22, 0.10, 0.12]]
 
+# biases for each neuron in 2nd layer
+biases2 = [0, 2, 3]
+
 # calculating output of layer 1
-outputs1 = np.dot(inputs, np.array(weights1).T)
+outputs1 = np.dot(inputs, np.array(weights1).T) + biases1
 
 # feeding output of layer 1 to layer 2 and calculating output of layer 2
-outputs2 = np.dot(outputs1, np.array(weights2).T)
+outputs2 = np.dot(outputs1, np.array(weights2).T) + biases2
 
 print(outputs2)
