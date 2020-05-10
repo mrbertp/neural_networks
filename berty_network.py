@@ -1,25 +1,27 @@
 import numpy as np
 
+np.random.seed(0)
+
 # 4 inputs
 # 3 batches
-inputs = [[5, 3, 2, 4],
-          [6, 2, 4, 3],
-          [7, 3, 2, 5]]
+X = [[1.0, 2.0, 3.0, 2.5],
+     [2.0, 5.0, -1.0, 2.0],
+     [-1.5, 2.7, 3.3, -0.8]]
 
-# 1st layer of 3 neurons
-weights1 = [[0.02, 0.40, 0.10, 0.05],
-            [0.20, 0.10, 0.04, 0.23],
-            [0.34, 0.56, 0.02, 0.55]]
 
-# 2nd layer of 2 neurons
-# number of inputs has changed to 3, conditioned by dimensons of output1
-weights2 = [[0.34, 0.56, 0.11],
-            [0.22, 0.10, 0.12]]
+class Layer_Dense:
+    def __init__(self, n_inputs, n_neurons):
+        self.weights = 0.10 * np.random.randn(n_inputs, n_neurons)
+        self.biases = np.zeros((1, n_neurons))
 
-# calculating output of layer 1
-outputs1 = np.dot(inputs, np.array(weights1).T)
+    def forward(self, inputs):
+        self.output = np.dot(inputs, self.weights) + self.biases
 
-# feeding output of layer 1 to layer 2 and calculating output of layer 2
-outputs2 = np.dot(outputs1, np.array(weights2).T)
 
-print(outputs2)
+layer1 = Layer_Dense(4, 5)
+layer2 = Layer_Dense(5, 2)
+
+layer1.forward(X)
+layer2.forward(layer1.output)
+
+print(layer2.output)
