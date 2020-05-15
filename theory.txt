@@ -1,0 +1,14 @@
+# Rectified Linear Activation Function (ReLU) #
+
+*verbose version:
+
+for i in inputs:
+    if i > 0:
+        output.append(i)
+    elif i <= 0:
+        output.append(0)
+
+*short version:
+
+for i in inputs:
+	output.append(max(0,i))
